@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { BrowserMultiFormatReader, BarcodeFormat } from "@zxing/library";
 import { Parse } from "aamva-parser";
 
-const Scanner = () => {
+const Scanner = ({ onSuccess = () => {} }) => {
   const videoRef = useRef(null);
   const [scannedData, setScannedData] = useState(null);
   const [error, setError] = useState(null);
@@ -34,6 +34,7 @@ const Scanner = () => {
               try {
                 const parsedData = Parse(rawData); // Parse AAMVA data
                 setScannedData(parsedData);
+                if (parsedData.firstName) onSuccess(parsedData);
                 setError(null);
               } catch (parseError) {
                 console.error("Parsing error:", parseError);
