@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dlbarcodescanner/static/css/main.f855e6bc.css",
+    "main.js": "/dlbarcodescanner/static/js/main.1041d85c.js",
+    "index.html": "/dlbarcodescanner/index.html",
+    "main.f855e6bc.css.map": "/dlbarcodescanner/static/css/main.f855e6bc.css.map",
+    "main.1041d85c.js.map": "/dlbarcodescanner/static/js/main.1041d85c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.1041d85c.js"
+  ]
+}
